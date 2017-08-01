@@ -4,62 +4,83 @@ dark blue: #06365f
 light blue: #1c5380
 */
 
+
+
 body {
   font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   background-image: url("../images/bgtile.png");
   background-repeat: repeat-x;
-  background-size: 80px 490px;
+  background-size: 80px 390px;
 }
 h1 {
 	color: navy;
+	top: 200px; 
+   	margin-left: 550px; 
+   	margin-bottom: 100px;
+   	margin-top: 150px;
+   	width: 100%; 
+
 
 }
 
-img{
-	width: 100%;
-	height: 400px;
-	/*position: absolute;*/
-}
+
 .brand{
 	width: 370px;
 	height: 100px;
-	display: inline-block;
+	margin-bottom: 400px;
+	margin-left: 20px;
+	border: 2px solid black;
 	
-	
-}
-
-footer{
-	padding-right:70;
-  	padding-left:70;
-  	
-  
-
 }
 .phone{
-	width: 315px;
-	height: 450px;
-
-	
-	
-	/*position: absolute;*/
-}
-.frame {
-	width: 575px;
-	height: 500px;
-	
-	
-	/*position: absolute;*/
+	margin-left: 200px;
+	margin-top: 200px;
 }
 
+.frame{
+	
+}
+.text {
+	width: 480px;
+	height: 100px;
+	margin-left: 540px;
+	
+	
+
+	border: 2px solid blue;
+}
 aside{
-	float: left;
+	margin-bottom: 300px;
 }
-section {
+p{
+
 	margin: 0px;
 
 }
-ul li {
-    width: 160px;
-    float: left;
+ul{
+	width: 10px;
+	list-style: none;
+	display: inline-block;
+
 }
+
+footer{
+
+	text-align: center;
+	padding-bottom: 50px;
+	border: 2px solid black;
+
+}
+div{
+	width: 100%;
+	height: 200px;
+}
+div img{ 
+
+
+	display: inline-block;
+	border: 2px solid black;
+
+}
+
