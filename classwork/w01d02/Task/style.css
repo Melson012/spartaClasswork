@@ -1,0 +1,77 @@
+*{
+	border: 2px solid black;
+}
+h1 {
+	margin: auto;
+	width:50%;
+	padding:10px;
+	text-align: center;
+}
+
+h2 {
+	margin: auto;
+	width:50%;
+	padding:10px;
+	text-align: center;
+}
+
+nav  {
+	margin: auto;
+	width:100%;
+	padding:10px;
+	text-align: center;
+	word-spacing: 100px;
+	border-radius: 100px;
+
+
+}
+li {
+	margin-left: 20%;
+
+
+}
+
+/*a {
+	width:100%;
+	margin: 0px;
+	padding: 10px;
+
+}*/
+
+body{
+	margin: 20px;
+	padding: 20px;
+
+}
+section{
+	width:100%;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+	
+}
+.face {
+	width: 50px;
+	height: 50px;
+	float: right;
+
+}
+article {
+	width:100%;
+	margin: auto;
+	padding: 10px;
+	text-align: center;
+}
+aside{
+	
+	width: 200px;
+	height: 500px;
+	float: left;
+	background-color: green;
+
+}
+footer {
+	text-align: center;
+	height: 50px;
+	font-size: 30px;  
+}
