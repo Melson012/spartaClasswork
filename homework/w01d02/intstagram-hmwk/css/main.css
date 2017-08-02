@@ -19,8 +19,8 @@ h1 {
    	margin-left: 550px; 
    	margin-bottom: 100px;
    	margin-top: 190px;
-   	width: 100%; 
-
+   	/*width: 100%; 
+*/
 
 }
 
@@ -83,6 +83,11 @@ div img{
 
 	display: inline-block;
 	/*border: 2px solid black;*/
+
+}
+section{
+	
+	/*border: 2px solid yellow;*/
 
 }
 
