@@ -2,41 +2,22 @@
 
 // Edited by Melson.Fernandes
 
-function main() {
+alert("Welcome to Rock, Paper, Scissors Game");
+// intro
+function main(){
 alert("Welcome to Rock, Paper, Scissors Game");
 game1();
 
 }
 
-// function userWins(i){
-// 	var i = 0;
-// 	if (i == 5) {alert("user wins");}
-	
 
-// }
-// function compWins(i){
-// 	var i = 0;
-// 	if (i == 5) {alert("computer wins");}
-	
-// }
+// Records the points-(needs to be outside function)
 var userPoints = 0;
 var ComputerPoints = 0;
 
 
-if (userPoints == 5){
-	alert("User wins with"+userPoints+"ponits")
 
-
-}else if (ComputerPoints == 5){
-	alert("Computer wins with"+ComputerPoints+"ponits")
-	
-}else{
-	game1();
-	
-}
-
-
-
+// Game function
 function game1(){
 var game = null;
 var userPick = prompt("Type in your choice | Rock| Paper| Scissors").toLowerCase();
@@ -75,11 +56,6 @@ if (randomCompu < 0.33 ) {
 
 
 
-
-
-
-// var userPoints = 0;
-// var ComputerPoints = 0;
 
 // Draw
 if (computerPick == 1 && game == 1 ){
@@ -149,13 +125,29 @@ if (computerPick == 2 && game == 1) {
 	
 }
 
+if (userPoints == 5){
+	alert("User wins with "+userPoints+" ponits");
+	userPoints = 0;
+	ComputerPoints = 0;
+	main();
+
+}else if (ComputerPoints == 5){
+	alert("Computer wins with "+ComputerPoints+" ponits");
+	userPoints = 0;
+	ComputerPoints = 0;
+	main();
+}else{
+	game1();
+	
+}
+
 
 
 game1();
 
 
 }
- main();
+main();
 
 
 
