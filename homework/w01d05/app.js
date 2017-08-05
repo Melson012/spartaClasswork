@@ -5,7 +5,7 @@
 //alert("Welcome to Rock, Paper, Scissors Game");
 // intro
 function main(){
-alert("Welcome to Rock, Paper, Scissors Game");
+alert("Welcome to Rock, Paper, Scissors, Spock Game");
 game1();
 
 }
