@@ -2,7 +2,7 @@
 
 // Edited by Melson.Fernandes
 
-alert("Welcome to Rock, Paper, Scissors Game");
+//alert("Welcome to Rock, Paper, Scissors Game");
 // intro
 function main(){
 alert("Welcome to Rock, Paper, Scissors Game");
@@ -20,7 +20,7 @@ var ComputerPoints = 0;
 // Game function
 function game1(){
 var game = null;
-var userPick = prompt("Type in your choice | Rock| Paper| Scissors").toLowerCase();
+var userPick = prompt("Type in your choice | Rock| Paper| Scissors | Spock").toLowerCase();
 var randomCompu = Math.random();
 // Math.Random range of 0-1. ()
 
@@ -34,8 +34,12 @@ if (userPick === "rock"){
 
 }else if (userPick === "scissors") {
 	game = 3;
+}else if (userPick === "spock") {
+	//alert("spock");
+	game = 4;
+
 }else{
-	alert("Choose from the three only!");
+	alert("Choose from the four only!");
 }
 
 
@@ -43,15 +47,18 @@ if (userPick === "rock"){
 var computerPick= null;
 var namepick=null;
 
-if (randomCompu < 0.33 ) {
+if (randomCompu < 0.25 ) {
 	computerPick = 1; //Rock
 	namepick="Rock";
-}else if (randomCompu <=0.66){
+}else if (randomCompu <=0.50){
 	computerPick = 2; //Paper
 	namepick="Paper";
-}else {
+}else if (randomCompu <=0.75) {
 	computerPick = 3; //Sissors
 	namepick="Sissors";
+}else  {
+	computerPick = 4; //Spock
+	namepick="Spock";
 }
 
 
@@ -70,7 +77,11 @@ if (computerPick == 1 && game == 1 ){
 	alert("It is a Draw: "+namepick+" vs "+userPick);
 	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
 	
+}else if (computerPick == 4 && game == 4) {
+	alert("It is a Draw: "+namepick+" vs "+userPick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
 }
+
 
 
 if (computerPick == 1 && game == 2) {
@@ -87,6 +98,24 @@ if (computerPick == 1 && game == 2) {
 	alert("Computer wins: "+namepick+" vs "+userPick);
 	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);	
 	
+}else if (computerPick == 1 && game == 4) {
+	userPoints+=1;
+	//countuser(i++);
+	alert("User wins: "+userPick+" vs "+namepick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
+
+}else if (computerPick == 2 && game == 4) {
+	ComputerPoints+=1;
+	//countcomp(i++);
+	alert("Computer wins: "+namepick+" vs "+userPick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);	
+
+}else if (computerPick == 3 && game == 4) {
+	userPoints+=1;
+	//countuser(i++);
+	alert("User wins: "+userPick+" vs "+namepick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
+
 }
 
 
@@ -123,7 +152,28 @@ if (computerPick == 2 && game == 1) {
 	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
 	
 	
+}else if (computerPick == 4 && game == 1) {
+	ComputerPoints+=1;
+	//countcomp(i++);
+	alert("Computer wins: "+namepick+" vs "+userPick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
+
+}else if (computerPick == 4 && game == 2) {
+	userPoints+=1;
+	//countuser(i++);
+	alert("User wins: "+userPick+" vs "+namepick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
+
+}else if (computerPick == 4 && game == 3) {
+	ComputerPoints+=1;
+	//countcomp(i++);
+	alert("Computer wins: "+namepick+" vs "+userPick);
+	alert("User: "+ userPoints+" | | "+"Computer Points: "+ComputerPoints);
 }
+
+
+
+
 
 if (userPoints == 5){
 	alert("User wins with "+userPoints+" ponits");
