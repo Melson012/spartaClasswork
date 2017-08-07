@@ -2,7 +2,7 @@
 
 // Edited by Melson.Fernandes
 
-//alert("Welcome to Rock, Paper, Scissors Game");
+
 // intro
 function main(){
 alert("Welcome to Rock, Paper, Scissors, Spock Game");
@@ -175,13 +175,13 @@ if (computerPick == 2 && game == 1) {
 
 
 
-if (userPoints == 5){
+if (userPoints == 3){
 	alert("User wins with "+userPoints+" ponits");
 	userPoints = 0;
 	ComputerPoints = 0;
 	main();
 
-}else if (ComputerPoints == 5){
+}else if (ComputerPoints == 3){
 	alert("Computer wins with "+ComputerPoints+" ponits");
 	userPoints = 0;
 	ComputerPoints = 0;
