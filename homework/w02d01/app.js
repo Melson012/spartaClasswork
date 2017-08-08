@@ -32,42 +32,43 @@ logic(userPick,compuChoice);
 function logic(userP,compuC){
 	switch (userP){
 		case 1:
-			if (compuC === "lizard",compuC === "scissors") {
-				alert("User Wins!\n"+compuC+" vs "+"rock\n");
+			if (compuC === "lizard" || compuC === "scissors") {
+				alert("User Wins!\n"+"Computer Choice: "+compuC+" vs "+"rock\n");
+				userPoints+=1;
 				status();
 				gameOver();
 			}else if (compuC === "rock" ){
-				alert("Draw\n"+"Computer Choice: "+compuC+" vs "+"rock"+"\n");
+				alert("Draw!\n"+"Computer Choice: "+compuC+" vs "+"rock"+"\n");
 				status();
 				gameOver();
 			}else {
-				alert("you lose\n"+"Computer Choice: "+compuC+" vs "+"rock"+"\n");
+				alert("You lose!\n"+"Computer Choice: "+compuC+" vs "+"rock"+"\n");
 				ComputerPoints+=1;
 				gameOver();}
 			break;
 		case 2:
 			if (compuC === "spock" || compuC === "rock") {
-				alert("User Wins!\n"+compuC+" vs "+"paper"+"\n");
+				alert("User Wins!\n"+"Computer Choice: "+compuC+" vs "+"paper"+"\n");
 				userPoints+=1;
 				status();
 				gameOver();
 			}else if (compuC === "paper" ){
-				alert("Draw\n"+"Computer Choice: "+compuC+" vs "+"paper"+"\n");
+				alert("Draw!\n"+"Computer Choice: "+compuC+" vs "+"paper"+"\n");
 				status();
 				gameOver();
-			}else {alert("you lose\n"+"Computer Choice: "+compuC+" vs "+"paper"+"\n");ComputerPoints+=1;status();gameOver();}
+			}else {alert("You lose!\n"+"Computer Choice: "+compuC+" vs "+"paper"+"\n");ComputerPoints+=1;status();gameOver();}
 			break;
 		case 3:
 			if (compuC === "paper" || compuC === "lizard") {
-				alert("User Wins!\n"+compuC+" vs "+"scissors"+"\n");
+				alert("User Wins!\n"+"Computer Choice: "+compuC+" vs "+"scissors"+"\n");
 				userPoints+=1;
 				status();
 				gameOver();
 			}else if (compuC === "scissors" ){
-				alert("Draw\n"+"Computer Choice: "+compuC+" vs "+"scissors"+"\n");
+				alert("Draw!\n"+"Computer Choice: "+compuC+" vs "+"scissors"+"\n");
 				status();
 				gameOver();
-			}else {alert("you lose\n"+"Computer Choice: "+compuC+" vs "+"scissors"+"\n");ComputerPoints+=1;status();gameOver();}
+			}else {alert("You lose!\n"+"Computer Choice: "+compuC+" vs "+"scissors"+"\n");ComputerPoints+=1;status();gameOver();}
 			break;
 		case 4:
 			if (compuC === "rock" || compuC === "scissors") {
@@ -79,18 +80,18 @@ function logic(userP,compuC){
 				alert("Draw\n"+"Computer Choice: "+compuC+" vs "+"spock"+"\n");
 				status();
 				gameOver();
-			}else {alert("you lose\n"+"Computer Choice: "+compuC+" vs "+"spock"+"\n");ComputerPoints+=1;status();gameOver();}
+			}else {alert("You lose!\n"+"Computer Choice: "+compuC+" vs "+"spock"+"\n");ComputerPoints+=1;status();gameOver();}
 			break;
 		case 5:
 			if (compuC === "spock" || compuC === "paper") {
-				alert("User Wins!\n"+compuC+" vs "+"lizard"+"\n");
+				alert("User Wins!\n"+"Computer Choice: "+compuC+" vs "+"lizard"+"\n");
 				userPoints+=1;
 				gameOver();
 			}else if (compuC === "lizard" ){
 				alert("Draw\n"+"Computer Choice: "+compuC+" vs "+"lizard"+"\n");
 				status();
 				gameOver();
-			}else {alert("you lose\n"+"Computer Choice: "+compuC+" vs "+"lizard"+"\n");ComputerPoints+=1;status();gameOver();}
+			}else {alert("You lose!\n"+"Computer Choice: "+compuC+" vs "+"lizard"+"\n");ComputerPoints+=1;status();gameOver();}
 			break;
 		case 6:
 			status();
