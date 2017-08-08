@@ -53,28 +53,24 @@ plus.addEventListener('click',function(){
 	operator= '+';
 	number1 = display.value;
 	display.value=null;
-	console.log(number1);
 })
 var minus = getInputsByValue("-")[0];
 minus.addEventListener('click',function(){
 	operator= '-';
 	number1 = display.value;
 	display.value=null;
-	console.log(number1);
 })
 var div = getInputsByValue("/")[0];
 div.addEventListener('click',function(){
 	operator= '/';
 	number1 = display.value;
 	display.value=null;
-	console.log(number1);
 })
 var mul = getInputsByValue("x")[0];
 mul.addEventListener('click',function(){
 	operator= 'x';
 	number1 = display.value;
 	display.value=null;
-	console.log(number1);
 })
 var clear = getInputsByValue("c")[0];
 clear.addEventListener('click',function(){
