@@ -80,18 +80,60 @@ plus.addEventListener('click',function(){
 	console.log(number1);
 })
 
+var minus = getInputsByValue("-")[0];
+minus.addEventListener('click',function(){
+	operator= '-';
+	number1 = display.value;
+	display.value=null;
+	console.log(number1);
+})
+var div = getInputsByValue("/")[0];
+div.addEventListener('click',function(){
+	operator= '/';
+	number1 = display.value;
+	display.value=null;
+	console.log(number1);
+})
+var mul = getInputsByValue("x")[0];
+mul.addEventListener('click',function(){
+	operator= 'x';
+	number1 = display.value;
+	display.value=null;
+	console.log(number1);
+})
+var clear = getInputsByValue("c")[0];
+clear.addEventListener('click',function(){
+	result = 0;
+	number1=0;
+	number2=0;
+	display.value=null;
+})
 
 var equals = getInputsByValue("=")[0];
 equals.addEventListener('click',function(){
+if (operator== "+") {
 	number2 = display.value;
 	display.value=null;
 	result = parseInt(number1)+parseInt(number2);
-	console.log(result);
-	
-	//console.log(result);
+	display.value=result;
+}else if (operator== "-") {
+	number2 = display.value;
+	display.value=null;
+	result = parseInt(number1)-parseInt(number2);
+	display.value=result;
+}else if (operator=="/") {
+	number2 = display.value;
+	display.value=null;
+	result = parseInt(number1)/parseInt(number2);
+	display.value=result;
+}else if (operator=="x") {
+	var equals = getInputsByValue("=")[0];
+	number2 = display.value;
+	display.value=null;
+	result = parseInt(number1)*parseInt(number2);
+	display.value=result;
+}
 })
-
-
 
 function getInputsByValue(value){
     var allInputs = document.getElementsByTagName("input");
@@ -102,5 +144,5 @@ function getInputsByValue(value){
     return results;
 }
 
-// Functions for calculator
+
 })
