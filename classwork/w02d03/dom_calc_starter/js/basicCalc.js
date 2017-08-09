@@ -21,12 +21,10 @@ var answer=null;
 // setup eventListeners
 function setUpListeners(){
 	//numbers event listeners
-	for (var i =0; i<numbers.length;i++) {
-		numbers[i].addEventListener('click', updateAndDisplayNum);
+	for (var i =0; i<numbers.length;i++) {		numbers[i].addEventListener('click', updateAndDisplayNum);
 	}
 	//operators event listeners
-	for (var i =0; i<operators.length;i++) {
-		operators[i].addEventListener('click', updateAndDisplayOp);
+	for (var i =0; i<operators.length;i++) {		operators[i].addEventListener('click', updateAndDisplayOp);
 	}
 	//equals event listeners
 	equals.addEventListener('click', function(){
@@ -91,10 +89,8 @@ function updateAndDisplayNum(){
 
 	if (first_number === null){
 		first_number = parseFloat(butn);
-
 	}else { 
-		second_number=parseFloat(butn);
-	}
+		second_number=parseFloat(butn);	}
 }
 //display and store operators
 function updateAndDisplayOp(){
