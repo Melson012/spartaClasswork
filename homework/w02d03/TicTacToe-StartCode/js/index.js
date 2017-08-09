@@ -2,10 +2,12 @@ $(function(event){
 	
 var player1Score = "X";
 var player2Score = "O";
-var possibleWins = [[0,1,2]];
-var player1Combination = [0,1,2];
+var possibleWins = [[0,1,2],[3,4,5],[6,7,8],[1,4,7],[0,4,8],[2,5,8],[0,3,6],[2,4,6]];
+var player1Combination = [];
 var player2Combination = [];
 var compareArray = [];
+var win = false;
+var display=$(".playerTurn");
 var boxes = $("td");
 var X = true;
 var O = false;
@@ -22,34 +24,40 @@ function onClick(box1){
 		 		i+=1;
 		 		player1Combination.push(parseInt($(box1).attr("data-num")))
 		 		console.log(player1Combination);
+		 		compareOP(player1Combination,player1Score);
 		 	}else {
 		 		$(box1).html(player2Score);
 		 		$(box1).addClass(player2Score);
 		 		i+=1;
 		 		player2Combination.push(parseInt($(box1).attr("data-num")))
 		 		console.log(player2Combination);
+		 		compareOP(player2Combination,player2Score);
 			}
-
-			// if (player1Combination.lenght <=3 || player2Combination.lenght <=3){
-			// 	compareArray.push(player2Combination);
-			// 	console.log(compareArray);
-			// }
 		 })
 }
-console.log(player1Combination===possibleWins);
-//console.log(player1Combination.[0,1,2]);
-function logic(){
 
-	possibleWins.each(function(i,val) {
-	    player1Combination.each(function(j,val_j) {
-	    	
-	    	
-	    });
-	});
+function compareOP(valueCom,player){
 	
+	for(var i=0;i<possibleWins.length;i++){
+		logic(valueCom,i,player);
+
+	}
 }
 
-});
+function logic(comb,ind,winner){
+	win = possibleWins[ind].every(function(element, index){
+		return comb.includes(element);
+
+	});
+
+if(win==true){
+	$(display.html(winner +" wins"));
+}
+}
+
+
+
+})
 
 
 	
