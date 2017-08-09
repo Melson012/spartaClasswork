@@ -1,6 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
 // Setup initial state variables
-var operator = '';
+//var butts = document.getElementsByClassName('number');
+for (var i = 0;i<numebr.length; i++) {
+
+	var b = butts[i];
+	b.addEventListener('click',function(){
+	console.log(this.);
+})
+}
+vperator = '';
 var display = document.getElementsByClassName("display")[0];
 var number1 = 0;
 var number2 = 0;
