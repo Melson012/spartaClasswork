@@ -9,6 +9,7 @@ var compareArray = [];
 var win = false;
 var display=$(".playerTurn");
 var boxes = $("td");
+var clear = $('#reset')
 var X = true;
 var O = false;
 var i = 0;
@@ -16,18 +17,23 @@ var r = 0;
 $(boxes).each(function(index,box){
 	onClick(box);
 })
+
 function onClick(box1){
 		 $(box1).on('click', function(){
 			if (i%2==0){
+				
 		 		$(box1).html(player1Score);
 		 		$(box1).addClass(player1Score);
+		 		$(display.html("it is O's turn"));
 		 		i+=1;
 		 		player1Combination.push(parseInt($(box1).attr("data-num")))
 		 		console.log(player1Combination);
 		 		compareOP(player1Combination,player1Score);
 		 	}else {
+
 		 		$(box1).html(player2Score);
 		 		$(box1).addClass(player2Score);
+		 		$(display.html("it is X's turn"));
 		 		i+=1;
 		 		player2Combination.push(parseInt($(box1).attr("data-num")))
 		 		console.log(player2Combination);
@@ -35,27 +41,35 @@ function onClick(box1){
 			}
 		 })
 }
-
 function compareOP(valueCom,player){
-	
 	for(var i=0;i<possibleWins.length;i++){
 		logic(valueCom,i,player);
-
 	}
 }
-
 function logic(comb,ind,winner){
 	win = possibleWins[ind].every(function(element, index){
 		return comb.includes(element);
-
 	});
 
 if(win==true){
-	$(display.html(winner +" wins"));
+	$(display.html(winner +" Wins!!"));
 }
+}
+function clearbutt(){
+		boxes.html(null);
+		boxes.removeClass(player1Score);
+		boxes.removeClass(player2Score);
+		player1Combination=[];
+		player2Combination=[];
+		$(display.html(" Click on the Board to Start!"));
 }
 
 
+$(clear).on('click', function(){
+		clearbutt();
+	})
+// $(display.html("Wins!!"))
+// console.log($(display.html()=="Wins!!"));
 
 })
 
