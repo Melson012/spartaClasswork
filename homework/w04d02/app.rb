@@ -5,7 +5,6 @@ get "/manga" do
 	"MANGA Melson"
 end
 
-
 get "/manga/new" do
 	"NEW MANGA"
 end
