@@ -2,22 +2,30 @@ require 'sinatra'
 require 'sinatra/reloader' if development?
 
 get "/manga" do 
-	"Melson"
+	"MANGA Melson"
 end
 
 
 get "/manga/new" do
-	"NEW"
+	"NEW MANGA"
 end
 
 get "/manga/:id" do
-	"SHOW"
+	"SHOW MANGA"
 end
 
 post "/manga" do 
-	"CREATE"
+	"CREATE MANGA"
 end
 
 get "/manga/:id/edit" do
-	"EDIT"
+	"EDIT MANGA"
+end
+
+put "/manga/:id" do 
+	"UPDATE MANGA"
+end
+
+delete "/manga/:id" do 
+	"DESTORY MANGA"
 end
