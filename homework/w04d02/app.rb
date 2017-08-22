@@ -16,4 +16,8 @@ end
 
 post "/manga" do 
 	"CREATE"
- end
+end
+
+get "/manga/:id/edit" do
+	"EDIT"
+end
