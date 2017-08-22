@@ -13,3 +13,7 @@ end
 get "/manga/:id" do
 	"SHOW"
 end
+
+post "/manga" do 
+	"CREATE"
+ end
