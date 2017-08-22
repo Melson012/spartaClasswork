@@ -5,6 +5,11 @@ get "/manga" do
 	"Melson"
 end
 
+
+get "/manga/new" do
+	"NEW"
+end
+
 get "/manga/:id" do
 	"SHOW"
 end
