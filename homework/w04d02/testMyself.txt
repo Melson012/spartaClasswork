@@ -1,0 +1,35 @@
+get index:
+- get "/manga" do 
+-  	" index"
+- end
+
+
+get new:
+- get "/manga/new" do 
+-  	" new"
+- end
+
+get show:
+- get "/manga/:id" do 
+-  	"show"
+- end
+
+put edit:
+- get "/manga/:id/edit" do 
+-  	"show"
+- end
+
+delete:
+- delete "/manga/:id" do 
+-  	"delete"
+- end
+
+create:
+- get "/manga" do 
+-  	"create"
+- end
+
+update:
+- put "/manga/:id" do 
+-  	"create"
+- end
