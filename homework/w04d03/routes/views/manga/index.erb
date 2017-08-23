@@ -1,8 +1,10 @@
 <h2><%= @header%></h2>
 <% @mangas.each do |manga| %>
-		<div>
-			<h3><a href="/<%= manga[:id]%>"><%= manga[:title]%></a></h3>
-			<p><%= manga[:rating]%></p>
-			<p><%= manga[:review]%></p>
+		<div class="mee">
+			<div class="try">
+				<h3><a href="/<%= manga[:id]%>"><%= manga[:title]%></a></h3>
+				<p class="rate"><%= manga[:rating]%></p>
+				<p><%= manga[:review]%></p>
+			</div>
 		</div>
 <% end %>
