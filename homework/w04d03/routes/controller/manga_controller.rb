@@ -35,14 +35,17 @@ class MangaController < Sinatra::Base
 
 	get "/" do
 		@header = "MANGAS"
+
 		@mangas = $manga_collection
 		erb :"manga/index"
 	end
 
 
 	get '/new' do
+		id = params[:id].to_i 
+		@mangas = $manga_collection[id]
 
-		"NEW"
+		erb :"manga/new"
 	end
 
 
@@ -58,7 +61,17 @@ class MangaController < Sinatra::Base
 
 	post "/" do 
 
-		"CREATE"
+		id = $manga_collection.length
+		new_Manga = {
+			id: id,
+			title: params[:title],
+			rating: params[:rating],
+			review: params[:review],
+		}
+		puts params
+		$manga_collection.push new_Manga
+
+		redirect "/"
 	end
 
 
@@ -74,7 +87,10 @@ class MangaController < Sinatra::Base
 
 	get "/:id/edit" do
 		
-		"EDIT"
+		id = params[:id].to_i 
+		@mangas = $manga_collection[id]
+
+		erb :"manga/edit"
 	end
 
 

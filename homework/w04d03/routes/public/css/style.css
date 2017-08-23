@@ -1,0 +1,26 @@
+.man{
+	background-color: #D5D887;
+	border-radius: 20px;
+}
+.jj{
+	margin: 0px;
+}
+nav{
+	color: black;
+	background-color: grey;
+}
+div{
+	margin-bottom: 30px;
+	
+}
+h2{
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+.form{
+	margin-left: 20px;
+	/*border: 2px solid black;*/
+}
+.main{
+	margin-top: 16px;
+}
