@@ -16,19 +16,19 @@ class MangaController < Sinatra::Base
 		id: 0,
 		title: "Dragon Ball Super",
 		rating: "8",
-		review: "Awesome",
+		review: "Inhabit hearing perhaps on ye do no. It maids decay as there he. Smallest on suitable disposed do although blessing he juvenile in. Society or if excited forbade. Here name off yet she long sold easy whom. Differed oh cheerful procured pleasure securing suitable in. Hold rich on an he oh fine. Chapter ability shyness article welcome be do on service.",
 	},
 	{
 		id: 1,
 		title: "Naruto",
 		rating: "7",
-		review: "Nice",
+		review: "Raising say express had chiefly detract demands she. Quiet led own cause three him. Front no party young abode state up. Saved he do fruit woody of to. Met defective are allowance two perceived listening consulted contained.",
 	},
 	{
 		id: 2,
 		title: "One Piece",
 		rating: "9",
-		review: "MADD",
+		review: "In as of whole as match asked. Pleasure exertion put add entrance distance drawings. In equally matters showing greatly it as. Want name any wise are able park when. Saw vicinity judgment remember finished men throwing.",
 	},
 	]
 
