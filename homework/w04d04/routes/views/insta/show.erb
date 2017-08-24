@@ -1,12 +1,14 @@
 <center>
-	<h1><%= @post[:title] %></h1>
-	<img src="<%=@post[:image]%>">
-	<p><%= @post[:description]%></p>
-	<a href="/<%=@post[:id]%>/edit">Edit</a>
+	<div class="show">
+		<h1><%= @post[:title] %></h1>
+		<img src="<%=@post[:image]%>">
+		<p><%= @post[:description]%></p>
+		<a href="/<%=@post[:id]%>/edit">Edit</a>
 
-	<form action="/<%= @post[:id] %>" method="POST">
-		<input type="hidden" name="_method" value="DELETE"">
-		<input type="submit" value="Delete">
-		
-	</form>
+		<form action="/<%= @post[:id] %>" method="POST">
+			<input type="hidden" name="_method" value="DELETE"">
+			<input type="submit" value="Delete">
+			
+		</form>
+	</div>
 </center>
