@@ -1,0 +1,54 @@
+.man{
+	background-color: #CBF3F0;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.try{
+	margin: 20px
+}
+.logo{
+	width: 100px;
+	height: 100px;
+}
+.jj{
+	margin: 0px;
+}
+.rate{
+	color: #FDEF17;
+	text-decoration: bold;
+}
+nav{
+	color: black;
+	background-color: grey;
+	height: 50px;
+
+}
+div{
+	margin-bottom: 30px;
+	
+}
+h2{
+	margin-bottom: 10px;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.form{
+	margin-left: 20px;
+	/*border: 2px solid black;*/
+}
+.main{
+	margin-top: 16px;
+}
+.bartext{
+	padding-top: 35px;
+	margin-left: 5px;
+	padding-left: 70px;
+	text-align: center;
+}
+.mee{
+	margin: 5px;
+	background-color: #FFFFFF;
+	color: black;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
