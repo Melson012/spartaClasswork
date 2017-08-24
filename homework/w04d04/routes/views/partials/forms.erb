@@ -1,16 +1,20 @@
-<form class="form" action="/" method="POST">
+<form action="/<%=@post[:id]%>" method="POST">
+
+	<% if (@post[:id] != "")%>
+		<input type="hidden" name="_method" value="PUT">
+	<% end %>
 	
 	<div >
 		<span><label>Title</label></span><br>
-		<input type="text" name="title" placeholder="Enter a Title">
+		<input type="text" name="title" placeholder="Enter a Title" value="<%=@post[:title]%>">
 	</div>
 	<div >
 		<span><label>link</label></span><br>
-		<input type="text" name="link" placeholder="Your Link here">
+		<input type="text" name="link" placeholder="Your Link here" value="<%=@post[:image]%>">
 	</div>
 	<div >
 		<span><label>description</label></span><br>
-		<textarea name="review" placeholder="Your description goes here ... " ></textarea>
+		<textarea name="description" placeholder="Your description goes here ... " ><%=@post[:description]%></textarea>
 	</div>
 	<div>
 		<input type="Submit" value="Save Review">	

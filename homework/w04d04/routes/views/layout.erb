@@ -7,7 +7,23 @@
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 <body>
-	<%= erb(:'partials/navigations', :layout => false)%>
-	<%= yield %>
+	<center>	
+		<div class="container tit">
+	  		<div class="jumbotron ">
+		    	<h1>Insta Posts</h1> 
+			</div>
+			<%= erb(:'partials/navigations')%>
+		</div>
+	</center>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				
+				<%= yield %>
+			</div>
+			
+		</div>
+	</div>
+		
 </body>
 </html>

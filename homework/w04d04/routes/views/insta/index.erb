@@ -1,0 +1,7 @@
+<% @post.each do |insta| %>
+		<div class="index">
+			<h3><a href="/<%= insta[:id]%>"><%= insta[:title]%></a></h3>
+			<img src="<%=insta[:image]%>">
+			<p><%= insta[:description]%></p>
+		</div>
+<% end %>
