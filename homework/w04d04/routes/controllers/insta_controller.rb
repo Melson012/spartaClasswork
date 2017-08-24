@@ -11,5 +11,44 @@ class InstaController < Sinatra::Base
 
 	end
 
+	get "/" do
+		"INDEX"
+	end
+
+
+	get '/new' do
+
+		"NEW"
+	end
+
+
+	get '/:id' do
+		
+		"SHOW"
+	end
+
+
+	post "/" do 
+
+		"POST"
+	end
+
+
+	put "/:id" do
+
+		"UPDATE"
+
+	end
+
+	delete "/:id" do 
+
+		"DELETE"
+		
+	end
+
+	get "/:id/edit" do
+		
+		"EDIT"
+	end
 
 end
