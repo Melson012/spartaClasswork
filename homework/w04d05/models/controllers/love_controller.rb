@@ -13,7 +13,7 @@ class LoveController < Sinatra::Base
 
   get '/' do
 
-      @title = "Blog posts"
+      
 
       @posts = Love.all
   
@@ -25,6 +25,7 @@ class LoveController < Sinatra::Base
     
     @post = Love.new
     @post.id =""
+    @post.image =""
     @post.title =""
     @post.body =""
 
@@ -47,6 +48,8 @@ class LoveController < Sinatra::Base
   post '/' do
     
     post = Love.new
+
+    post.image = params[:image]
     post.title = params[:title]
     post.body = params[:body]
 
@@ -63,6 +66,7 @@ class LoveController < Sinatra::Base
     id = params[:id].to_i
     post = Love.find id
 
+    post.image = params[:image]
     post.title = params[:title]
     post.body = params[:body]
 

@@ -1,14 +1,15 @@
 class Love
 
-	attr_accessor :id, :title, :body
+	attr_accessor :id, :image, :title, :body
 
 	def	self.open_connection
-		PG.connect(dbname: "love")
+		PG.connect(dbname: "faketinder")
 	end
 
 	def self.hydrate data
 		post = Love.new
 		post.id = data['id']
+		post.image = data['image']
 		post.title = data['title']
 		post.body = data['body']
 
@@ -17,7 +18,7 @@ class Love
 
 	def self.all
 		conn = self.open_connection
-		sql = "SELECT id, title, body FROM love ORDER BY id"
+		sql = "SELECT id, image, title, body FROM love ORDER BY id"
 		results = conn.exec(sql)
 
 		posts = results.map do |result|
@@ -29,7 +30,7 @@ class Love
 
 	def self.find id
 		conn = self.open_connection
-		sql = "SELECT id, title, body FROM love WHERE id = '#{id}' LIMIT 1"
+		sql = "SELECT id, image, title, body FROM love WHERE id = '#{id}' LIMIT 1"
 		posts = conn.exec(sql)
 		post = self.hydrate posts[0]
 
@@ -40,9 +41,9 @@ class Love
 		conn = Love.open_connection
 
 		if (!self.id)
-			sql = "INSERT INTO love(title,body) Values('#{self.title}','#{self.body}')"
+			sql = "INSERT INTO love(image,title,body) Values('#{self.image}','#{self.title}','#{self.body}')"
 		else
-			sql = "UPADTE love SET title='#{self.title}','#{self.body}' WHERE id = '#{self.id}'"
+			sql = "UPDATE love SET image='#{self.image}', title='#{self.title}', body='#{self.body}' WHERE id= #{self.id}"
 		end
 		conn.exec(sql)
 	end

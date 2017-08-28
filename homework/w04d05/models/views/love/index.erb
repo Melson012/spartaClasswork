@@ -1,9 +1,14 @@
 
-<h1>Welcome to the homepage</h1>
 
 <% @posts.each do |post| %>
-<div>
-  <h3><a href="/<%= post.id %>"><%= post.title %></a></h3>
-  <p><%= post.body %></p>
+<div class="col-sm-3 main">
+	<div class="mogo">
+		
+	<img class="pro" src="<%= post.image %>" >
+	  <h3><a href="/<%= post.id %>"><%= post.title %></a></h3>
+	  <p><%= post.body %></p>
+
+	</div>
+
 </div>
 <% end %>

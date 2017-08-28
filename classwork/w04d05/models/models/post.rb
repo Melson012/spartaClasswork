@@ -42,7 +42,7 @@ class Post
 		if (!self.id)
 			sql = "INSERT INTO post(title,body) Values('#{self.title}','#{self.body}')"
 		else
-			sql = "UPADTE post SET title='#{self.title}','#{self.body}' WHERE id= #{self.id}"
+			sql = "UPADTE post SET title='#{self.title}','#{self.body}' WHERE id= '#{self.id}'"
 		end
 		conn.exec(sql)
 	end

@@ -3,6 +3,10 @@
         <input type="hidden" name="_method" value="PUT">
     <% end %>
     <div class="form-group">
+        <label>DP</label>
+        <input class="form-control" type="text" name="image" placeholder="Enter a link" value="<%= @post.image %>">
+    </div>
+    <div class="form-group">
         <label>Title</label>
         <input class="form-control" type="text" name="title" placeholder="Enter a Title" value="<%= @post.title %>">
     </div>
