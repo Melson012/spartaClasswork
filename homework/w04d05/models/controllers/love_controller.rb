@@ -12,14 +12,15 @@ class LoveController < Sinatra::Base
 
 
   get '/' do
-
-      
-
       @posts = Love.all
-  
       erb :'love/index'
-  
   end
+
+  get '/like' do
+      @posts = Love.all
+      erb :'like/index'
+  end
+
     
   get '/new'  do
     
