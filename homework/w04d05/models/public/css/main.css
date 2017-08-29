@@ -5,6 +5,7 @@
 }
 .jum{
   margin: 0px;
+  height: 200px;
   
 }
 .pro{
@@ -15,5 +16,10 @@
 
 }
 .mogo{
+	text-align: center;
+	padding-bottom: 15px;
+}
+.footer{
+	padding-top: 30px;
 	text-align: center;
 }

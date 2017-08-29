@@ -30,7 +30,7 @@ class Like
 
 	def self.find id
 		conn = self.open_connection
-		sql = "SELECT id, image, title, body FROM love WHERE id = '#{id}' LIMIT 1"
+		sql = "SELECT id, image, title, body FROM attrc WHERE id = '#{id}' LIMIT 1"
 		posts = conn.exec(sql)
 		post = self.hydrate posts[0]
 

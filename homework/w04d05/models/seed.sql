@@ -23,7 +23,7 @@ CREATE TABLE attrc (
 
 );
 
-INSERT INTO attrc (image , title , body) VALUES ('','','');
+INSERT INTO attrc (image , title , body) VALUES ('http://freevector.co/wp-content/uploads/2012/07/59170-user-filled-person-shape.png','Melson','Awesome!');
 INSERT INTO attrc (image , title , body) VALUES ('','','');
 INSERT INTO attrc (image , title , body) VALUES ('','','');
 INSERT INTO attrc (image , title , body) VALUES ('','','');
