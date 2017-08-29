@@ -1,17 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @video.title %>
+  <h3><%= @video.title %></h3>
 </p>
 
 <p>
-  <strong>Url:</strong>
   <iframe width="560" height="315" src="<%=@video.url%>" frameborder="0" allowfullscreen></iframe>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <h6>Description: </h6>
   <%= @video.description %>
 </p>
 

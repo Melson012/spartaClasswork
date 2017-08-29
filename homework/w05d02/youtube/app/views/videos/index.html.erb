@@ -1,31 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<img class="logo" src="http://cdn04.androidauthority.net/wp-content/uploads/2017/08/new-youtube-logo-840x402.jpg">
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Url</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @videos.each do |video| %>
-      <tr>
-        <td><%= video.title %></td>
-        <td><iframe width="560" height="315" src="<%=video.url%>" frameborder="0" allowfullscreen></iframe></td>
-        <td><%= video.description %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Video', new_video_path %>
+<% @videos.each do |video| %>
+  <div class="col-sm-2 index">
+    <div class="divindex">
+      <p id="notice"><%= notice %></p>
+        <h3><%= video.title %></h3>
+        <iframe width="560" height="315" src="<%=video.url%>" frameborder="0" allowfullscreen></iframe>
+        <p><%= video.description %></p>
+        <%= link_to 'Show', video %> |
+        <%= link_to 'Edit', edit_video_path(video) %> |
+        <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %>     
+    </div>
+  </div>
+<% end %>
