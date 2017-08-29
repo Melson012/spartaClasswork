@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Videos</h1>
+<img class="logo" src="http://cdn04.androidauthority.net/wp-content/uploads/2017/08/new-youtube-logo-840x402.jpg">
 
 <table>
   <thead>
@@ -16,7 +16,7 @@
     <% @videos.each do |video| %>
       <tr>
         <td><%= video.title %></td>
-        <td><%= video.url %></td>
+        <td><iframe width="560" height="315" src="<%=video.url%>" frameborder="0" allowfullscreen></iframe></td>
         <td><%= video.description %></td>
         <td><%= link_to 'Show', video %></td>
         <td><%= link_to 'Edit', edit_video_path(video) %></td>
