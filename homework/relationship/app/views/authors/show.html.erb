@@ -9,7 +9,7 @@
   
   <% @books.each do |book| %>
   	<ol>
-  		<li><%=book.title%></li>
+  		<li><%= link_to book.title, book_path(@author)%></li>
   	</ol>
   <% end %>
   
