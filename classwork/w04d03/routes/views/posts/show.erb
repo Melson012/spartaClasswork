@@ -1,6 +1,12 @@
 <h1><%= @posts[:title] %></h1>
 <p><%= @posts[:content]%></p>
 <a href="/<%=@posts[:id]%>/edit">Edit</a>
+
+<form action="/<%= @posts[:id] %>" method="POST">
+	<input type="hidden" name="_method" value="DELETE"">
+	<input type="submit" value="Delete">
+	
+</form>
 	
 	
 

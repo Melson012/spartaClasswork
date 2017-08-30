@@ -1,0 +1,25 @@
+.logo{
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+.jum{
+  margin: 0px;
+  height: 200px;
+  
+}
+.pro{
+  border-radius: 85px;
+  width: 155px;
+  height: 162px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.mogo{
+	text-align: center;
+	padding-bottom: 15px;
+}
+.footer{
+	padding-top: 30px;
+	text-align: center;
+}

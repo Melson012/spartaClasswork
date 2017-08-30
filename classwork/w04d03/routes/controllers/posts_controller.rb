@@ -41,6 +41,13 @@ class PostsController < Sinatra::Base
 
 	get '/new' do
 
+		@posts = {
+			id: "",
+			title: "",
+			content: "",
+		}
+
+
 		erb :'posts/new'
 	end
 
@@ -74,12 +81,35 @@ class PostsController < Sinatra::Base
 
 	put "/:id" do
 
-		"UPDATE #{params[:id]}"
+		id = params[:id].to_i
+		posts = $posts[id]
+
+		# data is gathered in the params object
+	  
+	      
+	    # get the post object from our data store
+	    post = $posts[id];
+	      
+	    # update the values of the object with data from the request
+	    post[:title] = params[:title];
+	    post[:content] = params[:content];
+	      
+	    # save the post back to our data store ( at the spot it came from this time )
+	    $posts[id] = post;
+	      
+	    # redirect the user to a GET route. We'll go back to the INDEX.
+	    redirect "/";
+
 	end
 
 	delete "/:id" do 
 
-		"DELETE #{params[:id]}"
+		id = params[:id].to_i
+
+		$posts.delete_at(id)
+
+		redirect "/";
+		
 	end
 
 	get "/:id/edit" do
@@ -87,6 +117,7 @@ class PostsController < Sinatra::Base
 		parameter = params[:id].to_i 
 
 		@posts = $posts[parameter]
+		
 
 		erb :'posts/edit'
 	end

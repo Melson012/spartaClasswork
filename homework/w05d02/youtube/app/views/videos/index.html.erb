@@ -1,0 +1,22 @@
+<div class="container">
+      <div class="roq">
+        <div class="nav">
+          <nav >
+            <h2 class="new"><%= link_to 'New Video', new_video_path %></h2>
+          </nav>
+        </div>
+      </div>
+</div>
+<% @videos.each do |video| %>
+  <div class="col-sm-2 index">
+    <div class="divindex">
+      <p id="notice"><%= notice %></p>
+        <h3><%= video.title %></h3>
+        <iframe width="560" height="315" src="<%=video.url%>" frameborder="0" allowfullscreen></iframe>
+        <p><%= video.description %></p>
+        <%= link_to 'Show', video %> |
+        <%= link_to 'Edit', edit_video_path(video) %> |
+        <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %>     
+    </div>
+  </div>
+<% end %>
