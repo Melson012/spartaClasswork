@@ -15,33 +15,35 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+body{
+	font-family: 'Righteous';
+}
 .user_id{
 	display: none;
 }
+nav{
+
+}
 .rb{
-	background-color: #5EB4DF;
+	background-color: grey;
 	border-radius: 15px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .posts{
-	background-color: #AED9EF;
+	background-color: white;
 	margin: 15px;
-	color:grey;
-
-	/*border-bottom: 0.5px solid grey;
-	border-top: 0.5px solid grey;*/
-	border-radius: 10px;
+	color:black;
+	border-radius: 20px;
 	padding: 15px;
 	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 .form{
-	background-color: #5EB4DF;
+	background-color: grey;
 	border-radius: 15px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .form_1{
-	background-color: #5EB4DF;
+	/*background-color: #5EB4DF;*/
 	margin: 10px;
 	border-radius: 15px;
 	padding: 15px;
