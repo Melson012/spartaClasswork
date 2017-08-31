@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<div class="col-sm-12 rb">
+  <p id="notice"><%= notice %></p>
+  <% @posts.each do |post| %>
+    <div class="posts">
+      <h4><%= post.title %></h4>
+      <p><%= post.body %></p>
+   </div>    
+  <% end %>
+</div>
+
+
+
+
